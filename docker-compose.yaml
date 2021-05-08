@@ -1,0 +1,12 @@
+version: "3.3"
+# run with: docker-compose up --build
+
+services:
+    lambda:
+        build: 
+            context: .
+        container_name: lambda
+        ports:
+            - "8080:8080"
+        expose: 
+            - 8080 
