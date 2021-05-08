@@ -17,10 +17,10 @@ COPY requirements.txt requirements.txt
 RUN python3 -m pip install -r requirements.txt
 
 # Copy your model files from local into the container image
-COPY /path/to/local/model /${LAMBDA_TASK_ROOT}/my_model
+COPY /path/to/local/model ${LAMBDA_TASK_ROOT}/my_model
 
 # Copy the api handler function into the container
-COPY app.py /${LAMBDA_TASK_ROOT}/app.py
+COPY app.py ${LAMBDA_TASK_ROOT}/app.py
 
 # NOTE: app.py and my_model now sit next to each other in the container
 # so in app.py we load the model simply from relative import "./my_model"
