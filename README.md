@@ -6,6 +6,7 @@ To do development:
 - Customize requirements.txt to hold your dependencies
 - Customize the Dockerfile
     - Change /path/to/local/model to the path to your ML model
+- Edit app.py (the main python file) to run your inference
 - Run the container using the command `docker-compose up --build`
 - Optional: Run basic API calls to the container using `bash post_request.sh`
 - Hit it at "http://localhost:8080/2015-03-31/functions/function/invocations"
