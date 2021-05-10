@@ -14,3 +14,10 @@ To do development:
 To deploy:
 - Follow the steps here to configure AWS and your SAM deployment tool
 https://towardsdatascience.com/aws-lambda-with-custom-docker-images-as-runtime-9645b7baeb6f
+- IMPORTANT: Edit the template.yaml file created by SAM to have a larger MemorySize 
+```
+Globals:
+  Function:
+    Timeout: 180
+    MemorySize: 5000 # Very important - ML models and frameworks (TF, Torch) take up more than lambda's default memory, so make sure to adjust memory
+'''
