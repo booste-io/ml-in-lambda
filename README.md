@@ -20,4 +20,3 @@ Globals:
   Function:
     Timeout: 180
     MemorySize: 5000 # Very important - ML models and frameworks (TF, Torch) take up more than lambda's default memory, so make sure to adjust memory
-'''
